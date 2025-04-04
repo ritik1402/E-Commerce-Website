@@ -1,12 +1,67 @@
-# React + Vite
+# 🛒 ShopMate – Your E-Commerce Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **ShopMate**, a responsive and modern e-commerce cart page built using **React.js** and styled with custom CSS. This is part of the RitiX E-Commerce ecosystem.
 
-Currently, two official plugins are available:
+![Cart UI Screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📦 Beautiful and clean cart layout
+- 🖼️ Product image preview
+- ➕ Quantity increment/decrement buttons
+- ❌ Remove item functionality
+- 💻 Fully responsive design
+- 🔄 Smooth hover effects and transitions
+- ⚙️ Code structured for future integration with backend
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React.js (Vite)
+- **Styling**: Custom CSS (No Tailwind/Bootstrap used)
+- **Deployment**: Vercel
+
+---
+
+## 📁 Folder Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── Cart.jsx
+│   ├── CartItem.jsx
+│   └── Navbar.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   └── About.jsx
+│
+├── App.jsx
+└── main.jsx
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                          #How to run Locally
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Step 1: Clone the repository
+git clone https://github.com/ritik1402/your-project-name.git
+
+# Step 2: Move into project directory
+cd your-project-name
+
+# Step 3: Install dependencies
+npm install
+
+# Step 4: Start dev server
+npm run dev
+
+👤 Author
+Ritik Kumar Saxena
+🧑‍💻 MCA Graduate | Web Developer
+📬 ritik1402@gmail.com
+🔗 https://github.com/ritik1402
+
+

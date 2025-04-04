@@ -1,0 +1,139 @@
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: whitesmoke;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  text-decoration-style: none;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  transition: ease-in-out;
+  text-decoration: none;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  border: none;
+  padding: 5px;
+  outline: none;
+  color: Black;
+}
+
+.search-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+  color: #f8b400;
+}
+
+/* Login Button */
+.login-btn {
+  background: #f8b400;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* 🔥 Responsive Styling */
+@media (max-width: 768px) {
+
+  .navbar {
+      position: fixed;
+      z-index: 1000;
+      background-color: #333;
+      width: 100%;
+  }
+  
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: rgba(34, 34, 34, 0.95); /* Fixed background color issue */
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+      height: 100vh; /* Full height */
+      transition: left 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+      display: flex;
+      left: 0;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .search-bar {
+      width: 50%;
+  }
+}

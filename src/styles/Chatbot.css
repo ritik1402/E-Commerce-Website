@@ -1,38 +1,130 @@
+/* ===================== */
+/* Chat Button (App.jsx) */
+/* ===================== */
 .chat-button-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000; /* Ensure it's above other elements */
-  }
-  
-  .chat-toggle-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .chat-toggle-btn:hover {
-    background-color: #0056b3;
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
 
-  .chatbot-container {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    height: 400px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 1001; /* Above the button */
-    display: flex;
-    flex-direction: column;
+.chat-toggle-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-toggle-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* Chatbot Window */
+/* ===================== */
+.chatbot {
+  position: fixed;
+  bottom: 80px; /* Appears above the chat button */
+  right: 20px;
+  width: 320px;
+  max-height: 450px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeInUp 0.4s ease forwards;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Slide/animate in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollable message window */
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background: #f9f9f9;
+}
+
+/* Chat bubbles */
+.chat-window .user {
+  text-align: right;
+  margin: 6px 0;
+  background-color: #e3f2fd;
+  padding: 10px 14px;
+  border-radius: 20px 0 20px 20px;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.chat-window .bot {
+  text-align: left;
+  margin: 6px 0;
+  background-color: #f1f8e9;
+  padding: 10px 14px;
+  border-radius: 0 20px 20px 20px;
+  display: inline-block;
+  max-width: 80%;
+}
+
+/* Input section at the bottom */
+.chat-input-section {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+/* Input field */
+.chat-input-section input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #90caf9;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.chat-input-section input[type="text"]:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+}
+
+/* Send button */
+.chat-input-section button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2196f3, #00bcd4);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-input-section button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #00bcd4, #2196f3);
+}

@@ -42,23 +42,27 @@ const Chatbot = () => {
   },[messages])
 
   return (
-    <div className='chatbot'>
-        <div className="chat-window" ref={chatWindowRef}>
-            {messages.map((msg,index)=>(
-                <p key={index} className={msg.sender}>
-                    {msg.text}
-                </p>
-            ))}
-        </div>
-        <input
-        type='text'
-        placeholder='enter  your query here'
-        value={inputMsg}
-        onChange={(e)=> setInputMsg(e.target.value)}
-        />
-        <button type='submit' onClick={sendMessage}>send</button>
+   <div className="chatbot">
+      <div className="chat-window" ref={chatWindowRef}>
+        {messages.map((msg, index) => (
+          <p key={index} className={msg.sender}>
+            {msg.text}
+          </p>
+        ))}
+      </div>
 
-      
+      {/* Fixed input section */}
+      <div className="chat-input-section">
+        <input
+          type="text"
+          placeholder="Enter your query here..."
+          value={inputMsg}
+          onChange={(e) => setInputMsg(e.target.value)}
+        />
+        <button type="submit" onClick={sendMessage}>
+          Send
+        </button>
+      </div>
     </div>
   )
 }

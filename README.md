@@ -61,7 +61,7 @@ npm run dev
 👤 Author
 Ritik Kumar Saxena
 🧑‍💻 MCA Graduate | Web Developer
-📬 ritik1402@gmail.com
+📬 ritiksaxena1402@gmail.com
 🔗 https://github.com/ritik1402
 
 
